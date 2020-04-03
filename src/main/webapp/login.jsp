@@ -9,6 +9,7 @@
     <meta name="generator" content="Jekyll v3.8.6">
     <title>Login</title>
 
+	<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/sign-in/">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/css/bootstrap.min.css"/>
 	<meta name="theme-color" content="#563d7c">
@@ -47,23 +48,28 @@
 		  <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
 	</form>
 </body>
+
 <script>
 
 	const valida = (e) => {
-		e.preventDefault();
-    	let email = document.getElementById("email").value;
-    	let senha = document.getElementById("senha").value;
-    	if(email === '' || senha === ''){
-	    	alert('Campos obrigatórios não preenchidos!');
-	    	window.location = "http://localhost:9090/agenda-acme/login.jsp";
-    	} else if (email === "will@123.com" && senha === "123"){
+		
+    	let email = document.getElementById("email");
+    	let senha = document.getElementById("senha");
+    	
+    	if(email.value.trim() === '' || senha.value.trim() === ''){
+    		toastr.error("Campos obrigatórios não preenchidos!");
+    	} else if (email.value === "will@123.com" && senha.value === "123"){
+    		e.preventDefault();
     		window.location = "http://localhost:9090/agenda-acme/admin/dashboard/index.jsp"
     	} else {
-    		alert("Email ou senha inválido.")
+    		toastr.error("Email ou Senha inválido!");
+    		email.focus();
 		}
   	}
 	document.getElementById("btnLogar").addEventListener("click", valida);
 </script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 </html>
 

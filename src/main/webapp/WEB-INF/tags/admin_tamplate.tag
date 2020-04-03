@@ -6,13 +6,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>${title}</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/css/bootstrap.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/css/fontawesome-all.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/css/bootadmin.min.css">
+	<title>${title}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/css/bootstrap.min.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/admin/css/bootadmin.min.css">
+	<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body class="bg-light">
@@ -72,6 +74,7 @@
 	<script src="${pageContext.request.contextPath}/assets/admin/js/bootstrap.bundle.min.js"></script>
 	<script src="${pageContext.request.contextPath}/assets/admin/js/bootadmin.min.js"></script>
 	<script src="${pageContext.request.contextPath}/assets/admin/chart/chart.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 	
 	 <script>
 	
